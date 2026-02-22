@@ -1,1 +1,172 @@
-/* Add styles here */
+@layer base, layout, components, utilities;
+
+@layer base {
+    :root {
+        --primary: oklch(0.6 0.15 250);
+        --primary-light: oklch(0.9 0.05 250);
+        --bg-color: oklch(0.98 0.01 250);
+        --text-main: oklch(0.2 0.02 250);
+        --text-muted: oklch(0.5 0.02 250);
+        --white: #ffffff;
+        --card-shadow: 0 10px 25px -5px oklch(0 0 0 / 0.1), 0 8px 10px -6px oklch(0 0 0 / 0.1);
+        --card-hover-shadow: 0 20px 25px -5px oklch(0 0 0 / 0.15), 0 10px 10px -5px oklch(0 0 0 / 0.1);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Pretendard', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        word-break: keep-all;
+        background-image: 
+            radial-gradient(at 0% 0%, oklch(0.95 0.02 200) 0, transparent 50%), 
+            radial-gradient(at 100% 100%, oklch(0.95 0.02 300) 0, transparent 50%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@layer layout {
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    header {
+        padding: 4rem 0 3rem;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    header h1 span {
+        color: var(--primary);
+        display: block;
+    }
+
+    header p {
+        color: var(--text-muted);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    main {
+        flex: 1;
+        padding-bottom: 4rem;
+    }
+
+    footer {
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid oklch(0 0 0 / 0.05);
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    .grid-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        perspective: 1000px;
+    }
+}
+
+@layer components {
+    .subject-card {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+        border: 1px solid oklch(1 0 0 / 0.5);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .subject-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: var(--card-hover-shadow);
+        border-color: var(--primary);
+    }
+
+    .subject-card .icon {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        background: var(--primary-light);
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: var(--transition);
+    }
+
+    .subject-card:hover .icon {
+        background: var(--primary);
+        transform: rotate(10deg);
+    }
+
+    .subject-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .subject-card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+    }
+
+    /* Glow Effect */
+    .subject-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
+        opacity: 0;
+        transition: var(--transition);
+        z-index: -1;
+    }
+
+    .subject-card:hover::after {
+        opacity: 0.05;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 3rem 0 2rem;
+    }
+    
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
