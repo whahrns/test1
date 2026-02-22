@@ -19,13 +19,6 @@ const banners = [
         icon: '📺', 
         desc: '영상으로 익히는 하이러닝 활용법', 
         link: 'learning.html' 
-    },
-    { 
-        id: 'archive', 
-        name: '수업 사례 아카이브', 
-        icon: '📂', 
-        desc: '준비 중..', 
-        link: '#' 
     }
 ];
 
