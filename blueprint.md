@@ -13,7 +13,9 @@
   - HTML5, Modern CSS (Container Queries, Cascade Layers).
   - Vanilla JavaScript (ES Modules, Web Components).
 
-## 3. 현재 작업 단계 (Step 1)
+## 3. 현재 작업 단계 (Step 2)
 - [x] 프로젝트 청사진(`blueprint.md`) 작성.
-- [ ] 메인 화면 레이아웃 및 교과 선택 카드 구현.
-- [ ] 기본 테마 및 반응형 스타일링 적용.
+- [x] 메인 화면 레이아웃 및 교과 선택 카드 구현.
+- [x] 기본 테마 및 반응형 스타일링 적용.
+- [ ] 제휴 문의 페이지(`contact.html`) 제작 및 Formspree 연동.
+- [ ] 메인 화면과 문의 페이지 연결.
