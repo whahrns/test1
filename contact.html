@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도움 요청하기 - 경기도교육청 하이러닝 선도교원 지원</title>
+    <title>강의 및 하이러닝 문의 - 경기도교육청 하이러닝 선도교원 지원</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
 <body>
     <header>
         <div class="container">
-            <h1>하이러닝 도움 요청 <span>Help Request</span></h1>
-            <p>하이러닝 활용 및 교육과정 성취수준 관련 지원이 필요한 내용을 남겨주세요.</p>
+            <h1>강의 및 하이러닝 문의 <span>Inquiry</span></h1>
+            <p>연수 강의 요청이나 하이러닝 활용에 관한 궁금한 사항을 남겨주세요.</p>
         </div>
     </header>
 
@@ -29,20 +29,20 @@
                     <input type="email" id="email" name="_replyto" placeholder="답변을 받으실 선생님의 이메일 주소를 입력해 주세요." required>
                 </div>
                 <div class="form-group">
-                    <label for="category">지원 요청 분류</label>
+                    <label for="category">문의 분류</label>
                     <select id="category" name="category" style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid oklch(0.9 0.02 250); font-family: inherit; font-size: 1rem;">
+                        <option value="training">연수/강의 진행 요청</option>
                         <option value="high-learning">하이러닝 시스템 활용 문의</option>
                         <option value="curriculum">성취기준 및 성취수준 관련 문의</option>
-                        <option value="training">연수 진행 요청</option>
-                        <option value="etc">기타 지원 요청</option>
+                        <option value="etc">기타 문의 사항</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">상세 지원 내용</label>
-                    <textarea id="message" name="message" rows="6" placeholder="구체적으로 어떤 도움이 필요하신지 작성해 주세요." required></textarea>
+                    <label for="message">상세 문의 내용</label>
+                    <textarea id="message" name="message" rows="6" placeholder="구체적으로 어떤 내용이 궁금하신지 작성해 주세요." required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">도움 요청 전송</button>
+                    <button type="submit" class="btn-primary">문의 내용 전송</button>
                     <a href="index.html" class="btn-secondary">홈으로 돌아가기</a>
                 </div>
             </form>
