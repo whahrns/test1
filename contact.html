@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>강의 및 하이러닝 문의 <span>Inquiry</span></h1>
+            <h1>하이러닝 강의 및 문의</h1>
             <p>연수 강의 요청이나 하이러닝 활용에 관한 궁금한 사항을 남겨주세요.</p>
         </div>
     </header>
@@ -21,25 +21,24 @@
         <section class="form-container">
             <form action="https://formspree.io/f/mpqjyodz" method="POST">
                 <div class="form-group">
-                    <label for="name">성함 및 소속교</label>
-                    <input type="text" id="name" name="name" placeholder="문의하시는 선생님의 성함과 학교명을 입력해 주세요." required>
+                    <label for="name">소속교_성함</label>
+                    <input type="text" id="name" name="name" placeholder="문의하시는 선생님의 학교명과 성함을 입력해 주세요." required>
                 </div>
                 <div class="form-group">
-                    <label for="email">연락처 (이메일/메신저)</label>
-                    <input type="email" id="email" name="_replyto" placeholder="답변을 받으실 선생님의 이메일 주소를 입력해 주세요." required>
+                    <label for="email">연락처 (핸드폰)</label>
+                    <input type="email" id="email" name="_replyto" placeholder="답변을 받으실 선생님의 연락처를 입력해 주세요." required>
                 </div>
                 <div class="form-group">
                     <label for="category">문의 분류</label>
                     <select id="category" name="category" style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid oklch(0.9 0.02 250); font-family: inherit; font-size: 1rem;">
                         <option value="training">연수/강의 진행 요청</option>
-                        <option value="high-learning">하이러닝 시스템 활용 문의</option>
-                        <option value="curriculum">성취기준 및 성취수준 관련 문의</option>
+                        <option value="high-learning">하이러닝 활용 문의</option>
                         <option value="etc">기타 문의 사항</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="message">상세 문의 내용</label>
-                    <textarea id="message" name="message" rows="6" placeholder="구체적으로 어떤 내용이 궁금하신지 작성해 주세요." required></textarea>
+                    <textarea id="message" name="message" rows="6" placeholder="궁금하신 내용을 작성해 주세요." required></textarea>
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn-primary">문의 내용 전송</button>
@@ -51,7 +50,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 경기도교육청 하이러닝 선도교원 지원 시스템. All rights reserved.</p>
+            <p>&copy; 배곧라라중 조용석. All rights reserved.</p>
         </div>
     </footer>
 </body>
