@@ -3,7 +3,7 @@ const banners = [
         id: 'padlet', 
         name: '하이러닝 연수 패들렛', 
         icon: '📋', 
-        desc: '연수 자료 및 실습 결과 공유', 
+        desc: '연수 자료 공유', 
         link: 'https://padlet.com/whahrns/padlet-kqqtii6px2olapiy' 
     },
     { 
