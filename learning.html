@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이러닝 유튜브로</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .video-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid oklch(1 0 0 / 0.5);
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--card-hover-shadow);
+            border-color: var(--primary);
+        }
+        .video-thumbnail {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: linear-gradient(135deg, var(--primary-light) 0%, oklch(0.8 0.1 250) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-thumbnail::before {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        .video-card:hover .video-thumbnail::before {
+            transform: translate(-50%, -50%) scale(1.2);
+            opacity: 1;
+        }
+        .video-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .video-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        .video-info p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .video-tag {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            align-self: flex-start;
+        }
+        .back-nav {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary" style="display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.9rem;">← 메인으로 돌아가기</a>
+            </div>
+            <h1>하이러닝 <span>유튜브로</span></h1>
+            <p>클릭하면 유튜브 영상 페이지로 연결됩니다</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <a href="https://www.youtube.com/watch?v=C8sNaNQwgEM&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&t=1s" target="_blank" class="video-card">
+                <div class="video-thumbnail"></div>
+                <div class="video-info">
+                    <div>
+                        <h3>하이러닝 마스터하기 1편</h3>
+                        <p>하이러닝 시작하기: 회원가입 및 로그인, 홈 화면 기본 기능 안내</p>
+                    </div>
+                    <span class="video-tag">유튜브에서 보기</span>
+                </div>
+            </a>
+
+            <!-- Video 2 -->
+            <a href="https://www.youtube.com/watch?v=ynpH8Nvrg4A&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=6" target="_blank" class="video-card">
+                <div class="video-thumbnail"></div>
+                <div class="video-info">
+                    <div>
+                        <h3>하이러닝 마스터하기 2편</h3>
+                        <p>미래수업 설계하기(1): 통합학습창 보조 도구 활용 및 실시간 모니터링</p>
+                    </div>
+                    <span class="video-tag">유튜브에서 보기</span>
+                </div>
+            </a>
+
+            <!-- Video 3 -->
+            <a href="https://www.youtube.com/watch?v=gfEsZbmdsYc&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=5" target="_blank" class="video-card">
+                <div class="video-thumbnail"></div>
+                <div class="video-info">
+                    <div>
+                        <h3>하이러닝 마스터하기 3편</h3>
+                        <p>미래수업 설계하기(2): 모둠/발표 기능, 학급경영 도구, 챗봇 활용</p>
+                    </div>
+                    <span class="video-tag">유튜브에서 보기</span>
+                </div>
+            </a>
+
+            <!-- Video 4 -->
+            <a href="https://www.youtube.com/watch?v=E3NTzqAKD5A&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=4" target="_blank" class="video-card">
+                <div class="video-thumbnail"></div>
+                <div class="video-info">
+                    <div>
+                        <h3>하이러닝 마스터하기 4편</h3>
+                        <p>학생 맞춤형 교육 설계하기: AI 학습 진단 및 리포트 활용법</p>
+                    </div>
+                    <span class="video-tag">유튜브에서 보기</span>
+                </div>
+            </a>
+
+            <!-- Video 5 -->
+            <a href="https://www.youtube.com/watch?v=B4ufK_vJ-e0&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=3" target="_blank" class="video-card">
+                <div class="video-thumbnail"></div>
+                <div class="video-info">
+                    <div>
+                        <h3>하이러닝 활용 사례</h3>
+                        <p>경기도교육청 홍보영상 및 실제 교실 수업 활용 사례 모음</p>
+                    </div>
+                    <span class="video-tag">유튜브에서 보기</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 배곧라라중 조용석. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -56,7 +56,7 @@
 
     header h1 span {
         color: var(--primary);
-        display: block;
+        display: inline;
     }
 
     header p {

@@ -8,16 +8,23 @@ const banners = [
     },
     { 
         id: 'manual', 
-        name: '하이러닝 둘러보기', 
+        name: '하이러닝 활용 가이드', 
         icon: '📘', 
-        desc: '하이러닝 사이트 사용법', 
-        link: 'https://trashcanai.com/2026popup/' 
+        desc: '단계별 활용 매뉴얼 및 팁', 
+        link: '#' 
+    },
+    { 
+        id: 'youtube', 
+        name: '하이러닝 유튜브로', 
+        icon: '📺', 
+        desc: '영상으로 익히는 하이러닝 활용법', 
+        link: 'learning.html' 
     },
     { 
         id: 'archive', 
         name: '수업 사례 아카이브', 
         icon: '📂', 
-        desc: '준비 중', 
+        desc: '준비 중..', 
         link: '#' 
     }
 ];
@@ -48,8 +55,12 @@ class BannerCard extends HTMLElement {
 
         this.querySelector('.subject-card').addEventListener('click', (e) => {
             if (link && link !== '#') {
-                // 패들렛 링크로 이동
-                window.location.href = link; 
+                // 내부 링크인지 외부 링크인지 확인
+                if (link.startsWith('http')) {
+                    window.open(link, '_blank');
+                } else {
+                    window.location.href = link; 
+                }
             } else {
                 alert(`${name} 서비스는 준비 중입니다.`);
             }
