@@ -11,7 +11,7 @@ const banners = [
         name: '하이러닝 활용 가이드', 
         icon: '📘', 
         desc: '단계별 활용 매뉴얼 및 팁', 
-        link: '#' 
+        link: 'https://trashcanai.com/2026popup/' 
     },
     { 
         id: 'youtube', 
