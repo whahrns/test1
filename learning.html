@@ -7,156 +7,94 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        .video-card {
-            background: var(--white);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid oklch(1 0 0 / 0.5);
-        }
-        .video-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--card-hover-shadow);
-            border-color: var(--primary);
-        }
-        .video-thumbnail {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            background: linear-gradient(135deg, var(--primary-light) 0%, oklch(0.8 0.1 250) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .video-thumbnail::before {
-            content: '▶';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            color: var(--primary);
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-        .video-card:hover .video-thumbnail::before {
-            transform: translate(-50%, -50%) scale(1.2);
-            opacity: 1;
-        }
-        .video-info {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .video-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-        .video-info p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-        .video-tag {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            background: var(--primary-light);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            align-self: flex-start;
-        }
-        .back-nav {
-            margin-bottom: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
+    <nav class="sticky-nav">
+        <div class="container flex-nav">
+            <a href="index.html" class="nav-logo">하이러닝<span>선도교원</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="learning.html" class="active">유튜브 연수</a></li>
+                <li><a href="contact.html">도움 요청</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
-            <div class="back-nav">
-                <a href="index.html" class="btn-secondary" style="display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.9rem;">← 메인으로 돌아가기</a>
-            </div>
             <h1>하이러닝 <span>유튜브로</span></h1>
-            <p>클릭하면 유튜브 영상 페이지로 연결됩니다</p>
+            <p>실제 유튜브 교육 영상의 썸네일을 클릭하여 시청하세요</p>
         </div>
     </header>
 
     <main class="container">
         <div class="video-grid">
-            <!-- Video 1 -->
+            <!-- Video 1: C8sNaNQwgEM -->
             <a href="https://www.youtube.com/watch?v=C8sNaNQwgEM&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&t=1s" target="_blank" class="video-card">
-                <div class="video-thumbnail"></div>
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/C8sNaNQwgEM/hqdefault.jpg" alt="하이러닝 마스터하기 1편">
+                </div>
                 <div class="video-info">
                     <div>
                         <h3>하이러닝 마스터하기 1편</h3>
-                        <p>하이러닝 시작하기</p>
+                        <p>하이러닝 시작하기 (기본 설정 및 접속)</p>
                     </div>
                     <span class="video-tag">유튜브에서 보기</span>
                 </div>
             </a>
 
-            <!-- Video 2 -->
+            <!-- Video 2: ynpH8Nvrg4A -->
             <a href="https://www.youtube.com/watch?v=ynpH8Nvrg4A&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=6" target="_blank" class="video-card">
-                <div class="video-thumbnail"></div>
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/ynpH8Nvrg4A/hqdefault.jpg" alt="하이러닝 마스터하기 2편">
+                </div>
                 <div class="video-info">
                     <div>
                         <h3>하이러닝 마스터하기 2편</h3>
-                        <p>미래수업 설계하기(1)</p>
+                        <p>미래수업 설계하기 (1) - 수업 개설 및 관리</p>
                     </div>
                     <span class="video-tag">유튜브에서 보기</span>
                 </div>
             </a>
 
-            <!-- Video 3 -->
+            <!-- Video 3: gfEsZbmdsYc -->
             <a href="https://www.youtube.com/watch?v=gfEsZbmdsYc&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=5" target="_blank" class="video-card">
-                <div class="video-thumbnail"></div>
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/gfEsZbmdsYc/hqdefault.jpg" alt="하이러닝 마스터하기 3편">
+                </div>
                 <div class="video-info">
                     <div>
                         <h3>하이러닝 마스터하기 3편</h3>
-                        <p>미래수업 설계하기(2)</p>
+                        <p>미래수업 설계하기 (2) - 학습 활동 구성</p>
                     </div>
                     <span class="video-tag">유튜브에서 보기</span>
                 </div>
             </a>
 
-            <!-- Video 4 -->
+            <!-- Video 4: E3NTzqAKD5A -->
             <a href="https://www.youtube.com/watch?v=E3NTzqAKD5A&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=4" target="_blank" class="video-card">
-                <div class="video-thumbnail"></div>
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/E3NTzqAKD5A/hqdefault.jpg" alt="하이러닝 마스터하기 4편">
+                </div>
                 <div class="video-info">
                     <div>
                         <h3>하이러닝 마스터하기 4편</h3>
-                        <p>학생 맞춤형 교육 설계하기</p>
+                        <p>학생 맞춤형 교육 설계 (데이터 기반 피드백)</p>
                     </div>
                     <span class="video-tag">유튜브에서 보기</span>
                 </div>
             </a>
 
-            <!-- Video 5 -->
+            <!-- Video 5: B4ufK_vJ-e0 -->
             <a href="https://www.youtube.com/watch?v=B4ufK_vJ-e0&list=PLUW-d16_ZUbFkvi6QMpXTwlKKaWy1Od25&index=3" target="_blank" class="video-card">
-                <div class="video-thumbnail"></div>
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/B4ufK_vJ-e0/hqdefault.jpg" alt="하이러닝 마스터하기 5편">
+                </div>
                 <div class="video-info">
                     <div>
                         <h3>하이러닝 마스터하기 5편</h3>
-                        <p>학습 콘텐츠 활용하기</p>
+                        <p>학습 콘텐츠 활용하기 (외부 리소스 연동)</p>
                     </div>
                     <span class="video-tag">유튜브에서 보기</span>
                 </div>

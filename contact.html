@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
+    <nav class="sticky-nav">
+        <div class="container flex-nav">
+            <a href="index.html" class="nav-logo">하이러닝<span>선도교원</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="learning.html">유튜브 연수</a></li>
+                <li><a href="contact.html" class="active">도움 요청</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <h1>하이러닝 강의 및 문의</h1>
@@ -34,7 +45,7 @@
                 </div>
                 <div class="form-group">
                     <label for="category">문의 분류</label>
-                    <select id="category" name="category" style="width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid oklch(0.9 0.02 250); font-family: inherit; font-size: 1rem;">
+                    <select id="category" name="category">
                         <option value="training">연수/강의 진행 요청</option>
                         <option value="high-learning">하이러닝 활용 문의</option>
                         <option value="etc">기타 문의 사항</option>
@@ -46,7 +57,6 @@
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn-primary">문의 내용 전송</button>
-                    <a href="index.html" class="btn-secondary">홈으로 돌아가기</a>
                 </div>
             </form>
         </section>
