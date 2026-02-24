@@ -475,6 +475,25 @@
 }
 
 @media (max-width: 768px) {
+    .flex-nav {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+    }
+
     header {
         padding: 4rem 0 2rem;
     }
