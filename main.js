@@ -125,9 +125,58 @@ class ThemeManager {
     }
 }
 
+/**
+ * Toast Notification Manager
+ */
+class Toast {
+    constructor() {
+        this.toastElement = document.createElement('div');
+        this.toastElement.className = 'toast';
+        this.toastElement.innerHTML = `
+            <span class="toast-icon">🚀</span>
+            <span class="toast-message">다운로드 중입니다... 잠시만 기다려주세요.</span>
+        `;
+        document.body.appendChild(this.toastElement);
+        this.timer = null;
+    }
+
+    show(message = null, duration = 3000) {
+        if (message) {
+            this.toastElement.querySelector('.toast-message').textContent = message;
+        }
+
+        // Reset if already showing
+        if (this.timer) {
+            clearTimeout(this.timer);
+            this.toastElement.classList.remove('show');
+            // Small timeout to allow the class removal to register
+            setTimeout(() => {
+                this.toastElement.classList.add('show');
+            }, 10);
+        } else {
+            this.toastElement.classList.add('show');
+        }
+
+        this.timer = setTimeout(() => {
+            this.toastElement.classList.remove('show');
+            this.timer = null;
+        }, duration);
+    }
+}
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
+    const toast = new Toast();
+    
+    // Handle download link clicks
+    const downloadLinks = document.querySelectorAll('.download-link');
+    downloadLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            toast.show();
+        });
+    });
+
     const subjectList = document.getElementById('subject-list');
     
     if (subjectList) {
