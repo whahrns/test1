@@ -165,6 +165,14 @@
         perspective: 1000px;
         padding: 1rem;
     }
+
+    .guide-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        perspective: 1000px;
+        padding: 1rem;
+    }
 }
 
 @layer components {
@@ -502,7 +510,7 @@
         font-size: 2.2rem;
     }
     
-    .grid-layout {
+    .grid-layout, .guide-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 0;
