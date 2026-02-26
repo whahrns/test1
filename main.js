@@ -1,10 +1,10 @@
 const banners = [
     { 
-        id: 'guide', 
-        name: '하이러닝 이용가이드', 
-        icon: '📚', 
-        desc: '역할별(교사/학생/학부모/관리자) 가이드 다운로드', 
-        link: 'guide.html' 
+        id: 'padlet', 
+        name: '하이러닝 연수 패들렛', 
+        icon: '📋', 
+        desc: '연수 자료 공유', 
+        link: 'https://padlet.com/whahrns/padlet-kqqtii6px2olapiy' 
     },
     { 
         id: 'hi-learning-kr', 
@@ -14,25 +14,32 @@ const banners = [
         link: 'https://hi-learning.kr/' 
     },
     { 
-        id: 'padlet', 
-        name: '하이러닝 연수 패들렛', 
-        icon: '📋', 
-        desc: '연수 자료 공유', 
-        link: 'https://padlet.com/whahrns/padlet-kqqtii6px2olapiy' 
-    },
-    { 
         id: 'manual', 
-        name: '하이러닝 활용 가이드', 
+        name: '하이러닝 둘러보기', 
         icon: '📘', 
-        desc: '단계별 활용 매뉴얼 및 팁', 
+        desc: '하이러닝 사용법 익히기', 
         link: 'https://trashcanai.com/2026popup/' 
     },
     { 
+        id: 'guide', 
+        name: '하이러닝 이용 가이드', 
+        icon: '📚', 
+        desc: '역할별(교사/학생/학부모/관리자) 가이드 다운로드', 
+        link: 'guide.html' 
+    },
+    { 
         id: 'youtube', 
-        name: '하이러닝 유튜브로', 
+        name: '하이러닝 유튜브', 
         icon: '📺', 
         desc: '영상으로 익히는 하이러닝 활용법', 
         link: 'learning.html' 
+    },
+    { 
+        id: 'contact', 
+        name: '1:1 문의', 
+        icon: '✉️', 
+        desc: '궁금한 점을 이메일로 개별 문의', 
+        link: 'contact.html' 
     }
 ];
 
