@@ -7,6 +7,13 @@ const banners = [
         link: 'guide.html' 
     },
     { 
+        id: 'hi-learning-kr', 
+        name: '연수 신청 및 문의', 
+        icon: '🔗', 
+        desc: '공식 연수 사이트로 이동', 
+        link: 'https://hi-learning.kr/' 
+    },
+    { 
         id: 'padlet', 
         name: '하이러닝 연수 패들렛', 
         icon: '📋', 
