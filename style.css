@@ -88,6 +88,16 @@
         margin-left: 0.2rem;
     }
 
+    .nav-author {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        margin-left: 0.8rem;
+        padding-left: 0.8rem;
+        border-left: 1px solid oklch(0 0 0 / 0.1);
+        vertical-align: middle;
+    }
+
     .nav-links {
         display: flex;
         gap: 1.2rem;
@@ -491,6 +501,10 @@
 
     .nav-logo {
         font-size: 1.2rem;
+    }
+
+    .nav-author {
+        display: none;
     }
 
     .nav-links {
