@@ -88,8 +88,46 @@ class BannerCard extends HTMLElement {
 
 customElements.define('banner-card', BannerCard);
 
+/**
+ * Theme Manager
+ */
+class ThemeManager {
+    constructor() {
+        this.themeToggle = document.getElementById('theme-toggle');
+        this.body = document.body;
+        this.init();
+    }
+
+    init() {
+        // Load saved theme or check system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            this.body.classList.add('dark-mode');
+            this.updateIcon('dark');
+        }
+
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
+    }
+
+    toggleTheme() {
+        const isDark = this.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        this.updateIcon(isDark ? 'dark' : 'light');
+    }
+
+    updateIcon(theme) {
+        if (!this.themeToggle) return;
+        this.themeToggle.textContent = theme === 'dark' ? '🌙' : '🌞';
+    }
+}
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
+    new ThemeManager();
     const subjectList = document.getElementById('subject-list');
     
     if (subjectList) {
